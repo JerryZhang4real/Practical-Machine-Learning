@@ -31,7 +31,7 @@ class ColorDataset(Dataset):
 
         class_label = int(self.data_frame.iloc[idx]['label'])
 
-        color_code = self.data_frame.iloc[idx][['r', 'g', 'b']].values.asatype('float32')
+        color_code = self.data_frame.iloc[idx][['r', 'g', 'b', 'LRV']].values.asatype('float32')
         color_code = torch.tensor(color_code, dtype=torch.float32)
 
         return image, class_label, color_code
@@ -141,7 +141,7 @@ total_correct = 0
 total_samples = 0
 total_reg_loss = 0.0
 
-with torch.no_gradJ():
+with torch.no_grad():
     for images, labels, color_codes in dataloader:
         images = images.to(device)
         labels = labels.to(device)
