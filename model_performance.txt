@@ -1,0 +1,24 @@
+2025-02-20 14:13:19.212020
+Model: 100_0.1_1.0_color_model.pth
+Validation Accuracy: 81.25%
+
+2025-02-20 14:27:41.691153
+Model: 50_1.0_1.0_color_model.pth
+Validation Accuracy: 72.92%
+
+2025-02-20 15:43:31.892189
+Model: 50_0.0_1.0_color_model.pth
+Validation Accuracy: 12.50%
+
+2025-02-20 15:44:01.642443
+Model: 50_0.0_1.0_color_model.pth
+Validation Accuracy: 12.50%
+
+2025-02-20 18:34:12.001189
+Model: ResNet_152_50_0.1_1.0.pth
+Validation Accuracy: 54.17%
+
+2025-02-20 18:57:19.934478
+Model: 100_0.1_1.0_color_model.pth
+Validation Accuracy: 81.25%
+
