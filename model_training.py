@@ -58,6 +58,7 @@ original_transform = transforms.Compose([
     # transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
 ])
 
+# you can add transforms here to augment the data in the way you want
 # Define a transform to augment the data
 augmented_transform_1 = transforms.Compose([
     transforms.Resize((224, 224)),
@@ -94,10 +95,9 @@ original_dataset = ColorDataset(csv_file=csv_file, img_dir=img_dir, transform=or
 #     ax[i].imshow(transforms.ToPILImage()(image))
 #     ax[i].set_title(f'Label: {class_label}\nEncoded_Label: {class_encoded_label}\nColor: {color_code.numpy()}')
 #     ax[i].axis('off')
-
 # plt.show()
-# create the dataset with the new transform
 
+# create the dataset with the new transform
 augmented_dataset_1 = ColorDataset(csv_file=csv_file, img_dir=img_dir, transform=augmented_transform_1)
 # augmented_dataset_2 = ColorDataset(csv_file=csv_file, img_dir=img_dir, transform=augmented_transform_2)
 
@@ -109,7 +109,6 @@ augmented_dataset_1 = ColorDataset(csv_file=csv_file, img_dir=img_dir, transform
 #     ax[i].imshow(transforms.ToPILImage()(image))
 #     ax[i].set_title(f'Label: {class_label}\nEncoded_Label: {class_encoded_label}\nColor: {color_code.numpy()}')
 #     ax[i].axis('off')
-
 # plt.show()  
 
 # %%
@@ -133,7 +132,7 @@ data_loader = DataLoader(conbined_dataset, batch_size=48, shuffle=True)
 
 # plt.show()
 
-data_loader.__len__()
+#data_loader.__len__()
 
 # %%
 # Model Architecture
@@ -226,7 +225,7 @@ for epoch in range(num_epochs):
 
 # %%
 # save the model
-torch.save(model.state_dict(), 'ResNet_152_50_0.1_1.0_v2.pth')
+torch.save(model.state_dict(), 'models/ResNet_152_50_0.1_1.0_v2.pth')
 
 
 
