@@ -30,3 +30,83 @@ Validation Accuracy: 29.17%
 Model: 100_0.1_1.0_color_model.pth
 Validation Accuracy: 81.25%
 
+2025-03-05 10:57:06.243226
+Model: models\ResNet_152_50_0.1_1.0_v2.pth
+Validation Accuracy: 64.58%
+
+2025-03-05 11:02:50.615554
+Model: models\ResNet50_50_0.1_0.9.pth
+Validation Accuracy: 54.17%
+
+2025-03-05 11:12:41.596987
+Model: models\ResNet50_50_0.1_0.9_v2.pth
+Validation Accuracy: 75.00%
+
+2025-03-05 11:24:38.419165
+Model: models\ResNet50_50_0.1_0.9_v2.pth
+Validation Accuracy: 75.00%
+
+2025-03-05 11:25:53.776522
+Model: models\ResNet50_50_0.1_0.9_v2.pth
+Validation Accuracy: 75.00%
+
+2025-03-05 11:26:36.866513
+Model: models\ResNet50_50_0.1_0.9_v2.pth
+Validation Accuracy: 75.00%
+
+2025-03-05 11:28:53.101721
+Model: models\ResNet50_50_0.1_0.9_v2.pth
+Validation Accuracy: 75.00%
+
+2025-03-05 11:29:17.315081
+Model: models\ResNet50_50_0.1_0.9_v2.pth
+Validation Accuracy: 75.00%
+
+2025-03-05 11:34:51.943211
+Model: models\ResNet50_50_0.1_0.9_v2.pth
+Validation Accuracy: 75.00%
+
+2025-03-05 11:38:22.857658
+Model: models\ResNet50_50_0.1_0.9_v2.pth
+Validation Accuracy: 75.00%
+
+2025-03-05 11:39:12.599320
+Model: models\ResNet50_50_0.1_0.9_v2.pth
+Validation Accuracy: 75.00%
+
+2025-03-05 11:42:54.420962
+Model: models\ResNet50_50_0.1_0.9_v2.pth
+Validation Accuracy: 75.00%
+
+2025-03-05 11:43:30.838647
+Model: models\ResNet50_50_0.1_0.9_v2.pth
+Validation Accuracy: 75.00%
+
+2025-03-05 11:55:20.554182
+Model: models\ResNet50_50_0.1_0.9_v2.pth
+Validation Accuracy: 75.00%
+
+2025-03-05 12:19:08.328611
+Model: models\ResNet50_50_0.1_0.9_v2.pth
+Validation Accuracy: 75.00%
+
+2025-03-05 12:19:35.647404
+Model: models\ResNet50_50_0.1_0.9_v2.pth
+Validation Accuracy: 75.00%
+
+2025-03-05 12:20:54.031858
+Model: models\ResNet50_50_0.1_0.9_v2.pth
+Validation Accuracy: 75.00%
+
+2025-03-05 12:21:06.180668
+Model: models\ResNet50_50_0.1_0.9_v2.pth
+Validation Accuracy: 75.00%
+
+2025-03-05 12:21:10.362316
+Model: models\ResNet50_50_0.1_0.9_v2.pth
+Validation Accuracy: 75.00%
+
+2025-03-05 12:25:33.678449
+Model: models\ResNet50_50_0.1_0.9_v2.pth
+Validation Accuracy: 75.00%
+
