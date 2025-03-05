@@ -22,3 +22,11 @@ Validation Accuracy: 54.17%
 Model: 100_0.1_1.0_color_model.pth
 Validation Accuracy: 81.25%
 
+2025-02-25 21:49:24.915753
+Model: ResNet_152_50_0.1_1.0_v2.pth
+Validation Accuracy: 29.17%
+
+2025-02-25 21:50:05.140821
+Model: 100_0.1_1.0_color_model.pth
+Validation Accuracy: 81.25%
+
