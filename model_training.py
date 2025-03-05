@@ -99,7 +99,7 @@ original_dataset = ColorDataset(csv_file=csv_file, img_dir=img_dir, transform=or
 
 # create the dataset with the new transform
 augmented_dataset_1 = ColorDataset(csv_file=csv_file, img_dir=img_dir, transform=augmented_transform_1)
-# augmented_dataset_2 = ColorDataset(csv_file=csv_file, img_dir=img_dir, transform=augmented_transform_2)
+augmented_dataset_2 = ColorDataset(csv_file=csv_file, img_dir=img_dir, transform=augmented_transform_2)
 
 # Visualize the augmented data
 # fig, ax = plt.subplots(1, 5, figsize=(15, 3))
@@ -117,7 +117,7 @@ from torch.utils.data import ConcatDataset
 
 # conbined_dataset = ConcatDataset([original_dataset, augmented_dataset_1, augmented_dataset_2, original_dataset, augmented_dataset_2])
 # conbined_dataset = ConcatDataset([original_dataset, augmented_dataset_1, augmented_dataset_2])
-conbined_dataset = ConcatDataset([original_dataset, augmented_dataset_1])
+conbined_dataset = ConcatDataset([original_dataset, augmented_dataset_1, original_dataset, augmented_dataset_2])
 data_loader = DataLoader(conbined_dataset, batch_size=48, shuffle=True)
 
 # # Visualize the data   
@@ -138,13 +138,14 @@ data_loader = DataLoader(conbined_dataset, batch_size=48, shuffle=True)
 # Model Architecture
 import torch.nn as nn
 from torchvision import models
+from tqdm import tqdm
 
 class MultiTaskColorModel(nn.Module):
     def __init__(self, num_classes, regression_output_size):
         super(MultiTaskColorModel, self).__init__()
 
         #Use a pre-trained ResNet model as the backbone
-        self.backbone = models.resnet152(pretrained=True)
+        self.backbone = models.resnet50(pretrained=True)
         num_features = self.backbone.fc.in_features
 
         #Remove the final classification layer
@@ -182,7 +183,7 @@ criterion_reg = nn.MSELoss()
 
 # Hyperparameters for balancing the regerssion loss
 classsification_loss_weight = 0.1
-regression_loss_weight = 1.0
+regression_loss_weight = 0.9
 
 #Optimizer
 learning_rate = 0.001
@@ -199,8 +200,8 @@ num_epochs = 50
 for epoch in range(num_epochs):
     model.train()
     running_loss = 0.0
-
-    for images, labels, color_codes, encoded_labels in data_loader:
+    pbar = tqdm(data_loader, desc=f"Epoch {epoch+1}/{num_epochs}", unit="batch")
+    for images, labels, color_codes, encoded_labels in pbar:
         images = images.to(device)
         labels = encoded_labels.to(device)
         color_codes = color_codes.to(device)
@@ -219,13 +220,18 @@ for epoch in range(num_epochs):
         optimizer.step()
 
         running_loss += loss.item()
+        pbar.set_postfix(loss=f"{loss.item():.4f}")
 
     avg_loss = running_loss / len(data_loader)
     print(f"Epoch [{epoch+1}/{num_epochs}], Loss: {avg_loss:.4f}")
 
 # %%
-# save the model
-torch.save(model.state_dict(), 'models/ResNet_152_50_0.1_1.0_v2.pth')
+# save the modela
+save_folder = 'models'
+save_model_name = 'ResNet50_50_0.1_0.9_v2.pth'
+save_path = os.path.join(save_folder, save_model_name)
+print(f"Saving model to {save_path}")
+torch.save(model.state_dict(), save_path)
 
 
 
