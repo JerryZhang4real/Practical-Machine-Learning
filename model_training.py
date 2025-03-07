@@ -64,7 +64,7 @@ augmented_transform_1 = transforms.Compose([
     transforms.Resize((224, 224)),
     transforms.RandomHorizontalFlip(),
     transforms.RandomRotation(10),
-    transforms.ColorJitter(brightness=0.2, contrast=0.2, saturation=0.2, hue=0.2),
+    # transforms.ColorJitter(brightness=0.2, contrast=0.2, saturation=0.2, hue=0.2),
     transforms.ToTensor(),
     # transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
 ])
@@ -195,7 +195,8 @@ optimizer = optim.Adam(model.parameters(), lr=learning_rate)
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model.to(device)
 
-num_epochs = 50
+# num_epochs = 50
+num_epochs = 100
 
 for epoch in range(num_epochs):
     model.train()
@@ -222,13 +223,13 @@ for epoch in range(num_epochs):
         running_loss += loss.item()
         pbar.set_postfix(loss=f"{loss.item():.4f}")
 
-    avg_loss = running_loss / len(data_loader)
-    print(f"Epoch [{epoch+1}/{num_epochs}], Loss: {avg_loss:.4f}")
+    # avg_loss = running_loss / len(data_loader)
+    # print(f"Epoch [{epoch+1}/{num_epochs}], Loss: {avg_loss:.4f}")
 
 # %%
 # save the modela
 save_folder = 'models'
-save_model_name = 'ResNet50_50_0.1_0.9_v2.pth'
+save_model_name = 'ResNet50_100_0.1_0.9_v1.pth'
 save_path = os.path.join(save_folder, save_model_name)
 print(f"Saving model to {save_path}")
 torch.save(model.state_dict(), save_path)
