@@ -110,3 +110,15 @@ Validation Accuracy: 75.00%
 Model: models\ResNet50_50_0.1_0.9_v2.pth
 Validation Accuracy: 75.00%
 
+2025-03-06 20:44:25.337338
+Model: ResNet50_50_0.1_0.9_v3.pth
+Validation Accuracy: 31.25%
+
+2025-03-06 20:58:49.932629
+Model: ResNet50_100_0.1_0.9_v1.pth
+Validation Accuracy: 58.33%
+
+2025-03-06 21:08:31.847431
+Model: ResNet50_100_0.1_0.9_v1.pth
+Validation Accuracy: 81.25%
+
