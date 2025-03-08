@@ -122,3 +122,16 @@ Validation Accuracy: 58.33%
 Model: ResNet50_100_0.1_0.9_v1.pth
 Validation Accuracy: 81.25%
 
+2025-03-07 21:08:53.886257
+2025-03-07 21:09:39.925940
+Model: ResNet50_10_0.1_0.9_v1.pth
+Learning Rate: 0.001
+Epochs: 10
+Classification Loss Weight: 0.1REGRESSION_LOSS_WEIGHT: {REGRESSION_LOSS_WEIGHT}
+
+2025-03-07 21:12:21.685608
+Model: ResNet50_10_0.1_0.9_v1.pth
+Learning Rate: 0.001
+Epochs: 10
+Classification Loss Weight: 0.1	Regression Loss Weight: 0.9
+
