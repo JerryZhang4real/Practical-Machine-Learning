@@ -8,7 +8,7 @@ IMG_DIR = r'D:\COSI149\color_with_label'
 # === Training hyperparameters ===
 BATCH_SIZE = 48
 LEARNING_RATE = 0.001
-NUM_EPOCHS = 100
+NUM_EPOCHS = 10
 
 # === Loss weights ===
 CLASSIFICATION_LOSS_WEIGHT = 0.1
@@ -25,8 +25,8 @@ DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 MODEL_FOLDER = 'models'
 MODEL_ARCHI = 'ResNet50'
 MODEL_VERSION = 'v1'
-MODEL_NAME = MODEL_ARCHI + '_' + NUM_EPOCHS + '_' + CLASSIFICATION_LOSS_WEIGHT + \
-    '_' + REGRESSION_LOSS_WEIGHT + '_' + MODEL_VERSION + '.pth'
+MODEL_NAME = MODEL_ARCHI + '_' + str(NUM_EPOCHS) + '_' + str(CLASSIFICATION_LOSS_WEIGHT) + \
+    '_' + str(REGRESSION_LOSS_WEIGHT) + '_' + MODEL_VERSION + '.pth'
 
 # config into
 CONFIG_INFO = \
