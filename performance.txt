@@ -1,0 +1,6 @@
+2025-03-07 22:33:24.925420
+Model: ResNet50_10_0.1_0.9_v1.pth
+Learning Rate: 0.001
+Epochs: 10
+Classification Loss Weight: 0.1	Regression Loss Weight: 0.9
+
