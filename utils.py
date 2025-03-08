@@ -9,7 +9,7 @@ def log_performance(accuracy, reg_loss):
     Args:
         accuracy (float): The model's validation accuracy.
     """
-    with open('model_performance.txt', 'a') as f:
+    with open('performance.txt', 'a') as f:
         f.write(f"{datetime.datetime.now()}\n")
         f"Validation Accuracy: {accuracy*100:.2f}% + reg_loss: {reg_loss:.4f}\n"
         f.write(CONFIG_INFO)
