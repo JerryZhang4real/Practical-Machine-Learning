@@ -63,5 +63,7 @@ def evaluate():
     plt.show()
 
     log_performance(accuracy=accuracy, reg_loss=avg_reg_loss) 
+
+    
 if __name__ == '__main__':
     evaluate()

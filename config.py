@@ -5,10 +5,6 @@ import torch
 CSV_FILE = r'D:\COSI149\color_with_label\label.csv'
 IMG_DIR = r'D:\COSI149\color_with_label'
 
-# === Model saving parameters ===
-MODEL_FOLDER = 'models'
-MODEL_NAME = 'ResNet50_100_0.1_0.9_v1.pth'
-
 # === Training hyperparameters ===
 BATCH_SIZE = 48
 LEARNING_RATE = 0.001
@@ -25,6 +21,12 @@ REGRESSION_OUTPUT_SIZE = 4
 # === Device configuration ===
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
+# === Model saving parameters ===
+MODEL_FOLDER = 'models'
+MODEL_ARCHI = 'ResNet50'
+MODEL_VERSION = 'v1'
+MODEL_NAME = MODEL_ARCHI + '_' + NUM_EPOCHS + '_' + CLASSIFICATION_LOSS_WEIGHT + \
+    '_' + REGRESSION_LOSS_WEIGHT + '_' + MODEL_VERSION + '.pth'
 
 # config into
 CONFIG_INFO = \

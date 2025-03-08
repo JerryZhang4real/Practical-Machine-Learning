@@ -6,7 +6,7 @@ import torch.optim as optim
 from torch.utils.data import DataLoader, ConcatDataset
 from tqdm import tqdm
 
-from config import CSV_FILE, IMG_DIR, MODEL_FOLDER, MODEL_NAME, BATCH_SIZE, LEARNING_RATE, NUM_EPOCHS, CLASSIFICATION_LOSS_WEIGHT, REGRESSION_LOSS_WEIGHT, NUM_CLASSES, REGRESSION_OUTPUT_SIZE, DEVICE
+from config import CSV_FILE, IMG_DIR, DEVICE, NUM_CLASSES, REGRESSION_OUTPUT_SIZE, BATCH_SIZE, LEARNING_RATE, NUM_EPOCHS, CLASSIFICATION_LOSS_WEIGHT, REGRESSION_LOSS_WEIGHT, MODEL_FOLDER, MODEL_NAME
 from dataset import ColorDataset
 import augmentation as aug
 from model import MultiTaskColorModel
