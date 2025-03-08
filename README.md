@@ -2,7 +2,7 @@
 
 **Project 1: Color Recongnition Task**
 
-Color Recongnition/\
+project1/\
 ├── config.py   \
 ├── dataset.py  \
 ├── transforms.py   \
@@ -10,5 +10,8 @@ Color Recongnition/\
 ├── train.py    \
 ├── evaluate.py \
 └── utils.py 
+
+**Execute instruction:**\
+**In terminal, type `python project1/main.py train` for training and `python project1/main.py evaluate` for evaluation.**
 
 
