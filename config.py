@@ -26,12 +26,12 @@ MODEL_FOLDER = 'models'
 MODEL_ARCHI = 'ResNet50'
 MODEL_VERSION = 'v1'
 MODEL_NAME = MODEL_ARCHI + '_' + str(NUM_EPOCHS) + '_' + str(CLASSIFICATION_LOSS_WEIGHT) + \
-    '_' + str(REGRESSION_LOSS_WEIGHT) + '_' + MODEL_VERSION + '.pth'
+                '_' + str(REGRESSION_LOSS_WEIGHT) + '_' + MODEL_VERSION + '.pth'
 
 # config into
 CONFIG_INFO = \
         f"Model: {MODEL_NAME}\n" + \
         f"Learning Rate: {LEARNING_RATE}\n" + \
         f"Epochs: {NUM_EPOCHS}\n" + \
-        f"Classification Loss Weight: {CLASSIFICATION_LOSS_WEIGHT}" + "REGRESSION_LOSS_WEIGHT: {REGRESSION_LOSS_WEIGHT}\n" + \
+        f"Classification Loss Weight: {CLASSIFICATION_LOSS_WEIGHT}\t" + f"Regression Loss Weight: {REGRESSION_LOSS_WEIGHT}\n" + \
         f"\n"
